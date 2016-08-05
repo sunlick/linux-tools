@@ -1,0 +1,9 @@
+#!/bin/bash
+[ -f /tmp/sync-remote.mutex ] && exit
+touch /tmp/sync-remote.mutex
+export LANG=zh_CN.UTF-8`
+cd /work/votopin_rsync
+rsync -avz --delete -e ssh --exclude=.svn/ * 192.168.4.1:/work/xxx/
+rsync -avz --delete -e ssh --exclude=.svn/ * 192.168.4.2:/work/xxx/
+rsync -avz --delete -e ssh --exclude=.svn/ * 192.168.4.3:/work/xxx/
+rm -f /tmp/sync-remote.mutex

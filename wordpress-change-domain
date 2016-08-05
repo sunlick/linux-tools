@@ -1,0 +1,4 @@
+#迁移域名现在可以先装wp-cli,直接运行:
+wp –path=/var/www/wnw.com search-replace “www.wnw.com” “www.new_wnw.com” –allow-root –all-tables
+#wp-cli的安装及其他用法，可以去官网查询。
+

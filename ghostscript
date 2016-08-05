@@ -1,0 +1,1 @@
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pnggray -r60 -sOutputFile=test/out%d.png -dFirstPage=5 -dLastPage=10 test.pdf

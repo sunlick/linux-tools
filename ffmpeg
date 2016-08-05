@@ -1,0 +1,10 @@
+1.视频转GIF
+a.ffmpeg -i 5yzl-EJXEBYdvFB2uwRLrA__.mp4 -t 10 -s 320x240 -pix_fmt rgb24 demo.gif
+b.
+ffmpeg -i xxx.mp4 -y -vf fps=1/5,scale=500:-1 /tmp/foo-%03d.jpeg
+ffmpeg -f image2 -framerate 5 -i /tmp/foo-%03d.jpeg /tmp/xx.gif
+
+2.视频取截图
+ffmpeg -i xx.mp4 -vf "fps=1/30,scale=200:-1" /tmp/demo/%d.jpg
+
+
